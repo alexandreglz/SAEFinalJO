@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PageAdminController">
+    <HBox spacing="10" padding="10">
+        <Label text="PAGE ADMINISTRATEUR" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        <!-- <HBox fx:id="topRight" spacing="10" alignment="CENTER_RIGHT">
+
+            <Button fx:id="logoutButton">
+                <graphic>
+                    <ImageView fx:id="logoutIcon.png" fitWidth="20" fitHeight="20" />
+                </graphic>
+            </Button>
+        </HBox>
+    </HBox> -->
+    <GridPane hgap="10" vgap="10" padding="10">
+        <Label text="Choisir un sport:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="sportComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Athlétisme" />
+                    <String fx:value="Escrime" />
+                    <String fx:value="Handball" />
+                    <String fx:value="Natation" />
+                    <String fx:value="Volleyball" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Categorie:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <ComboBox fx:id="categorieComboBox" GridPane.columnIndex="3" GridPane.rowIndex="0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Homme" />
+                    <String fx:value="Femme" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Pays:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="paysComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="États-Unis" />
+                    <String fx:value="Chine" />
+                    <String fx:value="Japon" />
+                    <String fx:value="Grande-Bretagne" />
+                    <String fx:value="ROC" />
+                    <String fx:value="France" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Genre:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <ComboBox fx:id="genreComboBox" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Masculin" />
+                    <String fx:value="Féminin" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="Medaille d'or:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="medailleOrTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Medaille d'argent:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <TextField fx:id="medailleArgentTextField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Label text="Medaille de bronze:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="medailleBronzeTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+</VBox>
